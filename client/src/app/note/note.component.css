@@ -1,0 +1,21 @@
+.wrapper{
+    padding: 15px;
+    width: 700px;
+}
+.border{
+    padding: 10px;
+    border: 5pt solid black;
+}
+.inline{
+    display: inline-block;
+}
+.inputLength{
+    width: auto;
+}
+.marginTop{
+    margin-top: 30px;
+}
+.alignTop{
+
+    vertical-align: top;
+}

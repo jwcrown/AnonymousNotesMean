@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<div class="wrapper border">
+  <h1>Anonymous Notes</h1>
+
+  <div class="border">
+    <form (submit)="onSubmit()" #formData='ngForm'>
+      <h3 class="inline">Note: <input class="inputLength" type="text" name="note" required minlength="3" [(ngModel)]="Post.note"></h3>
+      <input type="submit" value="Add Note" class="btn-success" [disabled]="formData.invalid">
+    </form>
+  </div>
+
+  <div class="border marginTop">
+    <h2>Posted Notes</h2>
+      <div *ngFor= "let n of notes" class="border marginTop">
+        <h3 class="inline">{{n.message}}</h3>
+        <p class="inline alignTop">{{n.createdAt | date:'medium' }}</p>
+      </div>
+</div>
